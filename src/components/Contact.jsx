@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Briefcase, Github, Download } from 'lucide-react';
+import { Mail, Briefcase, Github, Download, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -10,7 +10,7 @@ const Contact = () => {
   const handleContact = (platform) => {
     toast({
       title: `Contact via ${platform}`,
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Vous pouvez la demander dans votre prochain message ! 🚀",
+      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Elle sera disponible prochainement ! 🚀",
     });
   };
 
@@ -21,6 +21,13 @@ const Contact = () => {
       description: 'Contactez-moi via Indeed',
       color: 'from-blue-500 to-indigo-600',
       action: () => handleContact('Indeed'),
+    },
+    {
+      icon: <Linkedin className="w-8 h-8" />,
+      title: 'LinkedIn',
+      description: 'Contactez-moi via LinkedIn',
+      color: 'from-indigo-600 to-violet-700',
+      action: () => handleContact('LinkedIn'),
     },
     {
       icon: <Github className="w-8 h-8" />,
@@ -103,8 +110,8 @@ const Contact = () => {
           <div className="inline-block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
             <img 
               className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400/30"
-              alt="Photo de profil professionnelle"
-             src="https://images.unsplash.com/photo-1575383596664-30f4489f9786" />
+              alt="Ma photo"
+             src="" />
             <p className="text-gray-300 text-lg">
               Disponible pour de nouvelles opportunités et collaborations
             </p>

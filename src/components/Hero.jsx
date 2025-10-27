@@ -1,31 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Github, Briefcase } from 'lucide-react';
+import { Download, Github, Briefcase, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/components/ui/use-toast';
 
 const Hero = () => {
-  const { toast } = useToast();
-
   const handleDownloadCV = () => {
-    toast({
-      title: "Téléchargement du CV",
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Vous pouvez la demander dans votre prochain message ! 🚀",
-    });
+    const link = document.createElement('a');
+    link.href = '/CV_Guyon-Valentin_Developpeur-FullStack.pdf';
+    link.download = 'CV_Guyon-Valentin_Developpeur-FullStack.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleGithub = () => {
-    toast({
-      title: "Lien GitHub",
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Vous pouvez la demander dans votre prochain message ! 🚀",
-    });
+    window.open('https://github.com/vguyon-dev', '_blank');
   };
 
   const handleIndeed = () => {
-    toast({
-      title: "Contact Indeed",
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Vous pouvez la demander dans votre prochain message ! 🚀",
-    });
+    window.open('https://profile.indeed.com/p/valenting-w9df4uc', '_blank');
+  };
+
+  const handleLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/guyon-valentin/', '_blank');
   };
 
   return (
@@ -90,6 +87,15 @@ const Hero = () => {
               >
                 <Briefcase className="mr-2" size={20} />
                 Indeed
+              </Button>
+
+              <Button
+                onClick={handleLinkedIn}
+                variant="outline"
+                className="border-blue-500 text-blue-400 hover:bg-blue-400/10 font-semibold px-6 py-6 text-lg"
+              >
+                <Linkedin className="mr-2" size={20} />
+                LinkedIn
               </Button>
             </motion.div>
           </motion.div>

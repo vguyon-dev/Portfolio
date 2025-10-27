@@ -19,21 +19,28 @@ const Footer = () => {
 
           <div className="flex gap-6">
             <a
-              href="#"
+              href="https://github.com/vguyon-dev"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
               aria-label="GitHub"
             >
               <Github size={24} />
             </a>
             <a
-              href="#"
+              href="https://profile.indeed.com/p/valenting-w9df4uc"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
               aria-label="Indeed"
             >
               <Briefcase size={24} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/guyon-valentin/"
+              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="mailto:vguyon.dev@hotmail.com"
               className="text-gray-400 hover:text-cyan-400 transition-colors"
               aria-label="Email"
             >
@@ -42,7 +49,7 @@ const Footer = () => {
           </div>
 
           <p className="text-gray-400 text-sm">
-            © {currentYear} Tous droits réservés
+            © {currentYear === 2025 ? "2025" : "2025 - " + currentYear} Tous droits réservés - Guyon Valentin
           </p>
         </div>
       </div>

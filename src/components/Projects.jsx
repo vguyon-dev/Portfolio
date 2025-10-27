@@ -10,35 +10,29 @@ const Projects = () => {
   const handleProjectClick = () => {
     toast({
       title: "Projet",
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Vous pouvez la demander dans votre prochain message ! 🚀",
+      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Il le sera prochainement ! 🚀",
     });
   };
 
   const projects = [
-    {
-      title: 'Application Web E-commerce',
-      description: 'Plateforme e-commerce complète avec gestion des produits, panier et paiement sécurisé.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'Modern e-commerce website with shopping cart and product displays',
+     {
+      title: 'Site Web',
+      description: 'Mon site portfolio actuel.',
+      technologies: ['JavaScript', 'JSX', 'Vite', 'Tailwind CSS','npm','Git'],
+      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
     },
     {
-      title: 'Application Desktop Windev',
+      title: 'Application Windev',
       description: 'Logiciel de gestion d\'entreprise développé avec Windev et base de données HFSQL.',
-      technologies: ['Windev', 'WLanguage', 'HFSQL', 'RAD'],
-      image: 'Professional business management software interface',
+      technologies: ['Windev', 'WLanguage', 'HFSQL', 'GDS'],
+      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
     },
     {
-      title: 'Application Mobile',
+      title: 'Application WindevMobile',
       description: 'Application mobile native développée avec WindevMobile pour iOS et Android.',
-      technologies: ['WindevMobile', 'WLanguage', 'API REST'],
-      image: 'Modern mobile app interface on smartphone',
-    },
-    {
-      title: 'Dashboard Analytics',
-      description: 'Tableau de bord interactif pour visualisation de données en temps réel.',
-      technologies: ['React', 'D3.js', 'TailwindCSS', 'WebSocket'],
-      image: 'Analytics dashboard with charts and graphs',
-    },
+      technologies: ['WindevMobile', 'WLanguage', 'HFSQL', 'GDS'],
+      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
+    }
   ];
 
   return (
