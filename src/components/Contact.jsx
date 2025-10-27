@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Briefcase, Github, Download, LinkedIn } from 'lucide-react';
+import { Mail, Briefcase, Github, Download, LinkedinIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -23,7 +23,7 @@ const Contact = () => {
       action: () => handleContact('Indeed'),
     },
     {
-      icon: <LinkedIn className="w-8 h-8" />,
+      icon: <LinkedinIcon className="w-8 h-8" />,
       title: 'LinkedIn',
       description: 'Contactez-moi via LinkedIn',
       color: 'from-indigo-600 to-violet-700',
