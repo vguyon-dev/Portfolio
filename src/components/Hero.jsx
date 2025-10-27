@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, Github, Briefcase, Linkedin } from 'lucide-react';
+import { Download, Github, Briefcase, LinkedIn } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -94,7 +94,7 @@ const Hero = () => {
                 variant="outline"
                 className="border-blue-500 text-blue-400 hover:bg-blue-400/10 font-semibold px-6 py-6 text-lg"
               >
-                <Linkedin className="mr-2" size={20} />
+                <LinkedIn className="mr-2" size={20} />
                 LinkedIn
               </Button>
             </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Briefcase, Mail } from 'lucide-react';
+import { Github, Briefcase, Mail, LinkedIn } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,7 +37,7 @@ const Footer = () => {
               className="text-gray-400 hover:text-cyan-400 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={24} />
+              <LinkedIn size={24} />
             </a>
             <a
               href="mailto:vguyon.dev@hotmail.com"
