@@ -5,13 +5,20 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
-  const { toast } = useToast();
+    const handleGithub = () => {
+    window.open('https://github.com/vguyon-dev', '_blank');
+  };
 
-  const handleContact = (platform) => {
-    toast({
-      title: `Contact via ${platform}`,
-      description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Elle sera disponible prochainement ! 🚀",
-    });
+  const handleIndeed = () => {
+    window.open('https://profile.indeed.com/p/valenting-w9df4uc', '_blank');
+  };
+
+  const handleLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/guyon-valentin/', '_blank');
+  };
+
+  const handleEmail = () => {
+    window.open('mailto:vguyon.dev@hotmail.com', '_blank');
   };
 
   const contactOptions = [
@@ -20,36 +27,29 @@ const Contact = () => {
       title: 'Indeed',
       description: 'Contactez-moi via Indeed',
       color: 'from-blue-500 to-indigo-600',
-      action: () => handleContact('Indeed'),
+      action: () => handleIndeed('Indeed'),
     },
     {
       icon: <LinkedinIcon className="w-8 h-8" />,
       title: 'LinkedIn',
       description: 'Contactez-moi via LinkedIn',
       color: 'from-indigo-600 to-violet-700',
-      action: () => handleContact('LinkedIn'),
+      action: () => handleLinkedIn('LinkedIn'),
     },
     {
       icon: <Github className="w-8 h-8" />,
       title: 'GitHub',
       description: 'Consultez mon code source',
       color: 'from-gray-600 to-gray-800',
-      action: () => handleContact('GitHub'),
-    },
-    {
-      icon: <Download className="w-8 h-8" />,
-      title: 'Télécharger CV',
-      description: 'Obtenez mon CV en PDF',
-      color: 'from-cyan-500 to-blue-600',
-      action: () => handleContact('CV'),
+      action: () => handleGithub('GitHub'),
     },
     {
       icon: <Mail className="w-8 h-8" />,
       title: 'Email',
       description: 'Envoyez-moi un message',
       color: 'from-purple-500 to-pink-600',
-      action: () => handleContact('Email'),
-    },
+      action: () => handleEmail('Email'),
+    }
   ];
 
   return (
@@ -111,7 +111,8 @@ const Contact = () => {
             <img 
               className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-400/30"
               alt="Ma photo"
-             src="" />
+              src=""  
+            />
             <p className="text-gray-300 text-lg">
               Disponible pour de nouvelles opportunités et collaborations
             </p>
