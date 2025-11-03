@@ -6,32 +6,37 @@ import { useToast } from '@/components/ui/use-toast';
 
 const Projects = () => {
   const { toast } = useToast();
-
-  const handleProjectClick = () => {
+  
+  const handleProjectClick = (url) => {
+  if (url) {
+    window.open(url, '_blank');
+  } else {
     toast({
       title: "Projet",
       description: "🚧 Cette fonctionnalité n'est pas encore implémentée—mais ne vous inquiétez pas ! Il le sera prochainement ! 🚀",
     });
-  };
+  }
+};
 
   const projects = [
-     {
+    {
       title: 'Site Web',
       description: 'Mon site portfolio actuel.',
-      technologies: ['JavaScript', 'JSX', 'Vite', 'Tailwind CSS','npm','Git'],
-      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
+      technologies: ['JavaScript', 'JSX', 'Vite', 'Tailwind CSS', 'npm', 'Git'],
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80',
+      githubUrl: 'https://github.com/vguyon-dev/Portfolio'
     },
     {
       title: 'Application Windev',
       description: 'Logiciel de gestion d\'entreprise développé avec Windev et base de données HFSQL.',
       technologies: ['Windev', 'WLanguage', 'HFSQL', 'GDS'],
-      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
     },
     {
       title: 'Application WindevMobile',
       description: 'Application mobile native développée avec WindevMobile pour iOS et Android.',
       technologies: ['WindevMobile', 'WLanguage', 'HFSQL', 'GDS'],
-      image: 'https://images.unsplash.com/photo-1572177812156-58036aae439c',
+      image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
     }
   ];
 
@@ -67,7 +72,7 @@ const Projects = () => {
                 <img 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   alt={project.title}
-                 src="https://images.unsplash.com/photo-1572177812156-58036aae439c" />
+                  src={project.image} />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
               </div>
 
@@ -92,18 +97,11 @@ const Projects = () => {
 
                 <div className="flex gap-4 pt-4">
                   <Button
-                    onClick={handleProjectClick}
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                    onClick={() => handleProjectClick(project.githubUrl)}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                   >
                     <ExternalLink className="mr-2" size={18} />
                     Voir le projet
-                  </Button>
-                  <Button
-                    onClick={handleProjectClick}
-                    variant="outline"
-                    className="border-cyan-400 text-cyan-400 hover:bg-cyan-400/10"
-                  >
-                    <Github size={18} />
                   </Button>
                 </div>
               </div>
